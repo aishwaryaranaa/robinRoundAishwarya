@@ -1,0 +1,118 @@
+#include<iostream.h>
+#include<math.h>
+using namespace std;
+struct O_S
+{ 
+int ArrT,ID_P,BuT;
+int WaiT,TAT,C_T,BTbackup;
+int pno;
+};
+struct O_S obj[3];
+int totaltime=0;
+int prefinaltime=0;
+int find(int at)
+{
+int maximum=0;
+for(i=0; i<=3; i++)
+{ 
+   if(obj[i].ArrT<=at)
+    {  
+      if(obj[i].BuT>obj[max].BuT)
+           {
+            maximum=i;
+           }
+     }
+}
+
+return maximum;
+}
+int findCT()
+{
+ int indexvalue, flag=0,i=obj[0].ArrT;
+ while(1)
+{ 
+  if(i<=3)
+  {
+   indexvalue=find(i);
+  }
+  else
+  {
+   indexvalue=find(3);
+  }
+cout<<"process execution at time"<<obj[indexvalue].pno<<"\t";
+obj[indexvalue].BuT-=1;
+totaltime+=1;
+i++;
+if(obj[indexvalue].BuT==0)
+{
+ obj[index].C_T=totaltime;
+cout<<"process"<<obj[indexvalue]"<<totaltime;
+}
+cout<<endl;
+if(totaltime==prefinaltime)
+  {
+   break;
+  }
+ }
+}
+int main()
+{ int i;
+obj[0].pno='a';
+obj[1].pno='b';
+obj[2].pno='c';
+for(i=0; i<3; i++)
+{
+obj[i].ArrT=1;
+}
+for(i=0; i<3; i++)
+{ 
+obj[i].BuT=pow(2,i+1);
+obj[i].BTbackup=obj[i].BuT;
+prefinaltotal+=obj[i].BuT;
+}
+obj[0].ID_P=2132;
+obj[1].ID_P=2102;
+obj[2].ID_P=2453;
+cout<<"process\tat\tbt\tid\n";
+for(i=0; i<3; i++)
+{
+cout<<obj[i].pno<<"\t";
+cout<<obj[i].ArrT<<"\t";
+cout<<obj[i].BuT<<"\t";
+cout<<obj[i].ID_P<<"\t";
+cout<<endl;
+}
+cout<<endl;
+totaltime+=obj[0].ArrT;
+prefinaltotal+=obj[0].ArrT;
+findCT():
+int totalWaiT=0;
+int totalTAT=0;
+for(i=0; i<3; i++)
+{ 
+obj[i].TAT=obj[i].C_T-obj[i].ArrT;
+obj[i].WaiT=obj[i].TAT-obj[i].BTbackup;
+totalWT+=obj[i].WaiT;
+totalTAT+=obj[i].TAT;
+}
+cout<<"after execution 
+cout<<"Pno\tat\tid\tbt\tct\tTAT\tWT\n";
+for(i=0;i<3;i++)
+{
+cout<<obj[i].pno<<"\t";
+cout<<obj[i].ArrT<<"\t";
+cout<<obj[i].ID_P<<"\t";
+cout<<obj[i].BTbackup<<"\t";
+cout<<obj[i].C_T<<"\t";
+cout<<obj[i].TAT<<"\t";
+cout<<obj[i].WaiT<<"\t";
+cout<endl;
+}
+cout<<endl;
+cout<<"total TAT="<<totalTAT<<endl;
+cout<<"Average TAT="<<totalTAT/3.0<<endl;
+cout<<"total WT="<<totalWT<<endl;
+cout<<"Average WT="<<totalWT/3.0<<endl;
+return 0;
+}
+
